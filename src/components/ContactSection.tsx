@@ -62,10 +62,23 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSending(true)
-    // Simulate send (replace with your preferred email service)
-    await new Promise((r) => setTimeout(r, 1500))
-    setSending(false)
-    setSent(true)
+    try {
+      const res = await fetch('https://formspree.io/f/meewgzpk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setSent(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        alert('Something went wrong. Please email me directly at ' + profile.email)
+      }
+    } catch {
+      alert('Something went wrong. Please email me directly at ' + profile.email)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
