@@ -291,3 +291,24 @@ body {
   box-shadow: 0 0 30px rgba(124, 58, 237, 0.7), 0 0 60px rgba(124, 58, 237, 0.3);
   transform: translateY(-2px);
 }
+
+/* Fix browser autofill turning input backgrounds white */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0B1120 inset !important;
+  box-shadow: 0 0 0px 1000px #0B1120 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #ffffff;
+}
+
+/* Ensure typed text is always visible in form inputs */
+input, textarea {
+  color: #ffffff !important;
+  color-scheme: dark;
+}
