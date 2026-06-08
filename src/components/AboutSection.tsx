@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { profile } from '@/data/profile'
 
 const timeline = [
-  { year: '2023', label: 'Started at Texial', detail: 'Associate Cyber Security Consultant', color: '#FFB800' },
-  { year: '2024', label: 'Grad Gurukul Trainer', detail: 'Cybersecurity & Ethical Hacking workshops', color: '#FF6B35' },
-  { year: '2025', label: 'CompTIA Certifications', detail: 'A+, Security+, CySA+ – all earned', color: '#00D9FF' },
-  { year: '2025', label: 'Multi-Institution Trainer', detail: 'NIIT, Imarticus, IntrnForte simultaneously', color: '#7C3AED' },
-  { year: '2025', label: 'ISO 27001 LA', detail: 'Certified Lead Auditor', color: '#00FF88' },
-  { year: '2026', label: 'CISA in Progress', detail: 'Final certification milestone', color: '#9F67FF' },
+  { year: '2023', label: 'Texial', detail: 'Associate Cyber Security Consultant, Full-Time | Jun 2023 – Dec 2024', color: '#FFB800' },
+  { year: '2024', label: 'Grad Gurukul', detail: 'Cyber Security Trainer, Part-Time | Bangalore', color: '#FF6B35' },
+  { year: '2025', label: 'GA Software Technologies', detail: 'Associate Cyber Security Consultant, Full-Time | Jan 2025 – Jun 2025', color: '#00D9FF' },
+  { year: '2025', label: 'Imarticus Learning', detail: 'Cyber Security Trainer, Part-Time (Weekends) | Mar 2025 – Dec 2025', color: '#7C3AED' },
+  { year: '2025', label: 'IntrnForte', detail: 'Cyber Security Specialist & Course Creator, Full-Time | Jun 2025 – Sep 2025', color: '#00FF88' },
+  { year: '2025', label: 'NIIT', detail: 'Cyber Security Consultant & Trainer, Full-Time (Remote) | Jun 2025 – Present', color: '#9F67FF' },
 ]
 
 export default function AboutSection() {
@@ -79,27 +79,9 @@ export default function AboutSection() {
                 className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-1.5 font-mono text-[11px] text-cyber-blue"
                 style={{ background: '#0B1120', border: '1px solid rgba(0,217,255,0.3)' }}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-cyber-green animate-pulse" />
-                AVAILABLE FOR HIRE
+                <span className="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse" />
+                CYBERSECURITY EXPERT
               </div>
-            </div>
-
-            {/* Contact chips */}
-            <div className="flex flex-wrap justify-center gap-2 mt-4">
-              {[
-                { label: profile.location, icon: '📍' },
-                { label: '4+ Years Exp', icon: '⚡' },
-                { label: 'ISO 27001 LA', icon: '🛡' },
-                { label: '500+ Trained', icon: '🎓' },
-              ].map((chip) => (
-                <span
-                  key={chip.label}
-                  className="flex items-center gap-1.5 px-3 py-1 font-rajdhani text-sm text-white/70 border border-white/10 bg-white/5"
-                >
-                  <span>{chip.icon}</span>
-                  {chip.label}
-                </span>
-              ))}
             </div>
           </motion.div>
 
